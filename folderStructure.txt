@@ -1,0 +1,184 @@
+jobconnect/
+├── backend/
+│   ├── src/
+│   │   ├── config/
+│   │   │   ├── env.js
+│   │   │   ├── db.js
+│   │   │   └── socket.js
+│   │   ├── controllers/
+│   │   │   ├── auth.controller.js
+│   │   │   ├── user.controller.js
+│   │   │   ├── company.controller.js
+│   │   │   ├── job.controller.js
+│   │   │   ├── application.controller.js
+│   │   │   ├── interview.controller.js
+│   │   │   ├── notification.controller.js
+│   │   │   ├── savedJob.controller.js
+│   │   │   └── admin.controller.js
+│   │   ├── services/
+│   │   │   ├── auth.service.js
+│   │   │   ├── user.service.js
+│   │   │   ├── company.service.js
+│   │   │   ├── job.service.js
+│   │   │   ├── application.service.js
+│   │   │   ├── interview.service.js
+│   │   │   ├── notification.service.js
+│   │   │   ├── savedJob.service.js
+│   │   │   ├── admin.service.js
+│   │   │   └── audit.service.js
+│   │   ├── routes/
+│   │   │   ├── index.js
+│   │   │   ├── auth.routes.js
+│   │   │   ├── user.routes.js
+│   │   │   ├── company.routes.js
+│   │   │   ├── job.routes.js
+│   │   │   ├── application.routes.js
+│   │   │   ├── interview.routes.js
+│   │   │   ├── notification.routes.js
+│   │   │   ├── savedJob.routes.js
+│   │   │   └── admin.routes.js
+│   │   ├── middleware/
+│   │   │   ├── auth.middleware.js
+│   │   │   ├── role.middleware.js
+│   │   │   ├── validate.middleware.js
+│   │   │   ├── upload.middleware.js
+│   │   │   ├── rateLimit.middleware.js
+│   │   │   ├── audit.middleware.js
+│   │   │   └── error.middleware.js
+│   │   ├── validators/
+│   │   │   ├── auth.validator.js
+│   │   │   ├── user.validator.js
+│   │   │   ├── job.validator.js
+│   │   │   ├── application.validator.js
+│   │   │   └── company.validator.js
+│   │   ├── utils/
+│   │   │   ├── ApiError.js
+│   │   │   ├── asyncHandler.js
+│   │   │   ├── jwt.js
+│   │   │   ├── password.js
+│   │   │   └── logger.js
+│   │   ├── database/
+│   │   │   ├── schema.sql
+│   │   │   ├── schema-extra.sql
+│   │   │   └── seed.js
+│   │   ├── app.js
+│   │   └── server.js
+│   ├── tests/
+│   │   ├── setup.js
+│   │   ├── auth.test.js
+│   │   └── jobs.test.js
+│   ├── uploads/.gitkeep
+│   ├── .env.example
+│   ├── .gitignore
+│   ├── jest.config.js
+│   ├── Dockerfile
+│   └── package.json
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── api/
+│   │   │   ├── axios.js
+│   │   │   ├── auth.api.js
+│   │   │   ├── user.api.js
+│   │   │   ├── job.api.js
+│   │   │   ├── application.api.js
+│   │   │   ├── company.api.js
+│   │   │   ├── interview.api.js
+│   │   │   ├── notification.api.js
+│   │   │   ├── savedJob.api.js
+│   │   │   └── admin.api.js
+│   │   ├── components/
+│   │   │   ├── common/
+│   │   │   │   ├── Navbar.jsx
+│   │   │   │   ├── Footer.jsx
+│   │   │   │   ├── Modal.jsx
+│   │   │   │   ├── Spinner.jsx
+│   │   │   │   ├── Skeleton.jsx
+│   │   │   │   ├── EmptyState.jsx
+│   │   │   │   ├── Pagination.jsx
+│   │   │   │   ├── DataTable.jsx
+│   │   │   │   └── ErrorBoundary.jsx
+│   │   │   ├── jobs/
+│   │   │   │   ├── JobCard.jsx
+│   │   │   │   └── JobFilters.jsx
+│   │   │   ├── applications/
+│   │   │   │   └── StatusBadge.jsx
+│   │   │   └── dashboard/
+│   │   │       ├── DashboardLayout.jsx
+│   │   │       └── StatCard.jsx
+│   │   ├── context/
+│   │   │   └── AuthContext.jsx
+│   │   ├── hooks/
+│   │   │   ├── useSocket.js
+│   │   │   └── useDebounce.js
+│   │   ├── pages/
+│   │   │   ├── public/
+│   │   │   │   ├── Home.jsx
+│   │   │   │   ├── Jobs.jsx
+│   │   │   │   ├── JobDetail.jsx
+│   │   │   │   ├── Companies.jsx
+│   │   │   │   ├── About.jsx
+│   │   │   │   ├── Login.jsx
+│   │   │   │   ├── Register.jsx
+│   │   │   │   ├── ForgotPassword.jsx
+│   │   │   │   └── ResetPassword.jsx
+│   │   │   ├── seeker/
+│   │   │   │   ├── SeekerDashboard.jsx
+│   │   │   │   ├── MyApplications.jsx
+│   │   │   │   ├── SavedJobs.jsx
+│   │   │   │   ├── Profile.jsx
+│   │   │   │   └── Notifications.jsx
+│   │   │   ├── recruiter/
+│   │   │   │   ├── RecruiterDashboard.jsx
+│   │   │   │   ├── PostJob.jsx
+│   │   │   │   ├── EditJob.jsx
+│   │   │   │   ├── ManageJobs.jsx
+│   │   │   │   ├── Applicants.jsx
+│   │   │   │   ├── Interviews.jsx
+│   │   │   │   └── CompanyProfile.jsx
+│   │   │   └── admin/
+│   │   │       ├── AdminDashboard.jsx
+│   │   │       ├── Users.jsx
+│   │   │       ├── Companies.jsx
+│   │   │       ├── Jobs.jsx
+│   │   │       ├── AuditLogs.jsx
+│   │   │       └── Reports.jsx
+│   │   ├── routes/
+│   │   │   ├── AppRoutes.jsx
+│   │   │   └── ProtectedRoute.jsx
+│   │   ├── tests/
+│   │   │   ├── setup.js
+│   │   │   └── StatusBadge.test.jsx
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
+│   ├── .env.example
+│   ├── .gitignore
+│   ├── Dockerfile
+│   ├── index.html
+│   ├── postcss.config.js
+│   ├── tailwind.config.js
+│   ├── vite.config.js
+│   ├── vitest.config.js
+│   ├── vercel.json
+│   └── package.json
+│
+├── docs/
+│   ├── setup.md
+│   ├── architecture.md
+│   ├── database-design.md
+│   ├── api-documentation.md
+│   ├── testing.md
+│   ├── deployment.md
+│   ├── user-guide.md
+│   ├── portfolio.md
+│   └── interview-prep.md
+│
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── docker-compose.yml
+├── .gitignore
+├── package.json
+└── README.md

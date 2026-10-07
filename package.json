@@ -1,0 +1,21 @@
+{
+  "name": "jobconnect",
+  "private": true,
+  "version": "1.0.0",
+  "description": "JobConnect — Job & Internship Platform",
+  "scripts": {
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "test:backend": "npm --prefix backend test",
+    "test:frontend": "npm --prefix frontend test",
+    "db:schema": "psql $DATABASE_URL -f backend/src/database/schema.sql && psql $DATABASE_URL -f backend/src/database/schema-extra.sql",
+    "db:seed": "npm --prefix backend run db:seed"
+  },
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
